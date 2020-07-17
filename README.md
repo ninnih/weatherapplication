@@ -1,6 +1,6 @@
 # Weather Application
 
-This application was built during </salt> spring 2020 Hackaton day. 
+This application was built during &#60;/salt&#62; spring 2020 Hackaton day. 
 
 It is a weather application built with express.js and React. 
 
