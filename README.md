@@ -9,4 +9,3 @@ To install run npm i & npm start in both the server and client folder.
 
 The application connects to openweathermap's current weather API (https://openweathermap.org/current). On page load it gets the users current location and if Geolocation is supported will provide the nearby weather getting the latitude and longitude. The user can also enter a query to search for a specific city.
 
-![Alt Text](https://drive.google.com/file/d/185ti4dAw2W47tnwD3Y8D8Oe5AsRQfKtz/view?usp=sharing)
