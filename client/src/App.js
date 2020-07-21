@@ -60,7 +60,7 @@ handleSubmit(e) {
     body: JSON.stringify(data),
   })
   .then(res => res.json())
-  .then(data => this.setState({ weatherdata: data }))
+  .then(data => this.setState({ weatherdata: data, value: '' }))
 }
 
   render() {

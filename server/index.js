@@ -7,11 +7,11 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const key = '9ead2978b09934b51389e65389cb9722';
+const key = '';
 
 app.post('/api/nearby', (req, res) => {
-  let lon = req.body.longitude;
-  let lat = req.body.latitude;
+  const lon = req.body.longitude;
+  const lat = req.body.latitude;
 
   fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`)
   .then(res => res.json())
@@ -28,7 +28,7 @@ app.post('/api/nearby', (req, res) => {
 })
 
 app.post('/api/weather', (req, res) => {
-  let city = req.body.value;
+  const city = req.body.value;
 
   if (city === '') {
     city = 'stockholm';
@@ -40,7 +40,7 @@ app.post('/api/weather', (req, res) => {
       res.status(404).send({
         error: true,
       })
-    } else if (data.cod === '400'){
+    } else if (data.cod === '400') {
       res.status(400).send({
         empty: true,
       })
