@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Add your own key from https://openweathermap.org/current below inside the ''.
 const key = '';
 
 app.post('/api/nearby', (req, res) => {
@@ -58,4 +59,4 @@ app.post('/api/weather', (req, res) => {
   .catch(e => console.log(e))
 })
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
